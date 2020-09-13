@@ -31,20 +31,15 @@ const App = () => {
 
     function onOpenNotification(notify) {
       console.log("[App] onOpenNotification: ", notify)
-      alert('Open Notification: ', notify.body)
+      alert('Open Notification: ' + notify.body)
       setMessageFirebase(notify.body)
-
     }
 
     return () => {
       console.log('[App] unRegister')
       fcmService.unRegister()
-      localNotificationService.unRegister()
+      localNotificationService.unregister()
     }
-
-
-
-
 
   }, [])
 

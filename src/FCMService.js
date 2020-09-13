@@ -107,7 +107,7 @@ class FCMService {
         })
     }
 
-    onRegister = () => {
+    unRegister = () => {
         this.messageListener()
     }
 
